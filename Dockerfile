@@ -1,5 +1,5 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
 COPY target/demo-1.0.0.jar app.jar
-EXPOSE 80
-CMD ["java", "-jar", "app.jar", "--server.port=80"]
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app.jar"]
